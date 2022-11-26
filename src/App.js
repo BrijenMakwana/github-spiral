@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import Spiral from "./components/Spiral";
 
 function App() {
+  const [spiralColor, setSpiralColor] = useState();
+  const [trans, setTrans] = useState(0.5);
+
+  const randomColor = () => {
+    const o = Math.round,
+      r = Math.random,
+      s = 255;
+    setSpiralColor(
+      "rgba(" +
+        o(r() * s) +
+        "," +
+        o(r() * s) +
+        "," +
+        o(r() * s) +
+        "," +
+        trans +
+        ")"
+    );
+  };
+
+  useEffect(() => {
+    randomColor();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Spiral size={200} spiralColor={spiralColor} />
+      <Spiral size={240} spiralColor={spiralColor} />
+      <Spiral size={280} spiralColor={spiralColor} />
+      <Spiral size={320} spiralColor={spiralColor} />
+      <Spiral size={360} spiralColor={spiralColor} />
+      <Spiral size={400} spiralColor={spiralColor} />
     </div>
   );
 }
