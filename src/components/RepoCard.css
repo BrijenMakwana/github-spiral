@@ -1,0 +1,29 @@
+.card-container {
+  background-color: pink;
+  width: 300px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.repo-name {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.repo-description {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.date-created {
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #fff;
+  border-radius: 15px;
+  width: fit-content;
+  padding: 5px 10px;
+}

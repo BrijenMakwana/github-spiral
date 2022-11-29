@@ -1,40 +1,30 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Spiral from "./components/Spiral";
+import axios from "axios";
+import RepoCard from "./components/RepoCard";
 
 function App() {
-  const [spiralColor, setSpiralColor] = useState();
-  const [trans, setTrans] = useState(0.5);
-
-  const randomColor = () => {
-    const o = Math.round,
-      r = Math.random,
-      s = 255;
-    setSpiralColor(
-      "rgba(" +
-        o(r() * s) +
-        "," +
-        o(r() * s) +
-        "," +
-        o(r() * s) +
-        "," +
-        trans +
-        ")"
-    );
+  const getGitHubData = () => {
+    axios
+      .get("https://api.github.com/users/brijenmakwana/repos")
+      .then(function (response) {
+        // handle success
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
   };
 
-  useEffect(() => {
-    randomColor();
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="App">
-      <Spiral size={200} spiralColor={spiralColor} />
-      <Spiral size={240} spiralColor={spiralColor} />
-      <Spiral size={280} spiralColor={spiralColor} />
-      <Spiral size={320} spiralColor={spiralColor} />
-      <Spiral size={360} spiralColor={spiralColor} />
-      <Spiral size={400} spiralColor={spiralColor} />
+      <RepoCard />
     </div>
   );
 }
