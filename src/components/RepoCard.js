@@ -3,16 +3,21 @@ import "./RepoCard.css";
 import moment from "moment";
 
 const RepoCard = (props) => {
+  const { repoName, repoDescription, repoCreatedDate } = props;
   return (
-    <div className="card-container">
-      <h2 className="repo-name">devlink</h2>
+    <div
+      className="card-container"
+      style={{
+        backgroundColor:
+          "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0"),
+      }}
+    >
+      <h2 className="repo-name">{repoName}</h2>
       <p className="repo-description">
-        Each developer has a variety of links they would like to share with
-        potential employers, colleagues, friends, and other people. You can
-        share all of your links at once in one location using Devlink.
+        {repoDescription ?? "no description available"}
       </p>
       <span className="date-created">
-        {moment("2022-10-14T06:05:56Z").format("ll")}
+        {moment(repoCreatedDate).format("ll")}
       </span>
     </div>
   );

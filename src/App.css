@@ -5,5 +5,13 @@
 }
 
 .App {
-  height: 100vh;
+  height: fit-content;
+}
+
+.repo-cards {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: row;
+  border-top: 5px solid #434242;
+  width: fit-content;
 }

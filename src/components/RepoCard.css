@@ -1,9 +1,13 @@
 .card-container {
-  background-color: pink;
-  width: 300px;
+  /* background-color: pink; */
+  min-width: 350px;
   height: fit-content;
   padding: 20px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  margin: 20px 50px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 .repo-name {
