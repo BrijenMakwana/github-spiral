@@ -1,18 +1,16 @@
 .card-container {
-  /* background-color: pink; */
-  min-width: 350px;
+  background-color: #fff;
+  max-width: 350px;
   height: fit-content;
   padding: 20px;
-  /* border-radius: 15px; */
-  margin: 20px 50px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 15px;
+  margin: 20px 30px;
 }
 
 .repo-name {
   font-size: 25px;
   text-transform: capitalize;
+  margin-top: 15px;
 }
 
 .repo-description {
@@ -30,4 +28,20 @@
   border-radius: 15px;
   width: fit-content;
   padding: 5px 10px;
+}
+
+.days-spent-container {
+  background-color: aquamarine;
+  position: absolute;
+  padding: 10px;
+  margin-top: -40px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.days-spent-text {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #434242;
 }

@@ -4,14 +4,62 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: linear-gradient(to right, #8de9d5, #32c4c0);
+}
+
 .App {
   height: fit-content;
 }
 
+.github-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.user-name {
+  margin-top: 10px;
+  font-size: 35px;
+}
+
+.user-git-handle {
+  margin-top: 10px;
+  font-size: 25px;
+  color: #434242;
+}
+
+.user-bio {
+  width: 500px;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.total-repos-container {
+  background-color: #fff;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.total-repos-text {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 .repo-cards {
-  margin-top: 200px;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
-  border-top: 5px solid #434242;
-  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -3,19 +3,25 @@ import "./RepoCard.css";
 import moment from "moment";
 
 const RepoCard = (props) => {
-  const { repoName, repoDescription, repoCreatedDate } = props;
+  const { repoName, repoDescription, repoCreatedDate, repoLastUpdatedDate } =
+    props;
   return (
-    <div
-      className="card-container"
-      style={{
-        backgroundColor:
-          "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0"),
-      }}
-    >
+    <div className="card-container">
+      {/* total days spent */}
+      <div className="days-spent-container">
+        <span className="days-spent-text">
+          {moment(repoLastUpdatedDate).diff(moment(repoCreatedDate), "days") +
+            1}{" "}
+          days
+        </span>
+      </div>
+      {/* repo name */}
       <h2 className="repo-name">{repoName}</h2>
+      {/* repo description */}
       <p className="repo-description">
         {repoDescription ?? "no description available"}
       </p>
+      {/* repo created date */}
       <span className="date-created">
         {moment(repoCreatedDate).format("ll")}
       </span>
