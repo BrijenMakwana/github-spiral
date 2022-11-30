@@ -1,0 +1,27 @@
+.searchbar-container {
+  background-color: #fff;
+  padding: 15px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchbar-image {
+  width: 35px;
+  height: 35px;
+}
+
+.input {
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  margin-left: 10px;
+  flex: 1;
+}

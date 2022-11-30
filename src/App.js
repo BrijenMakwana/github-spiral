@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import RepoCard from "./components/RepoCard";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   const [repos, setRepos] = useState([]);
@@ -42,12 +43,13 @@ function App() {
   };
 
   useEffect(() => {
-    getUser();
-    getGitHubData();
+    // getUser();
+    // getGitHubData();
   }, []);
 
   return (
     <div className="App">
+      <SearchBar />
       <div className="github-user-container">
         <img
           src={user.avatar_url}
