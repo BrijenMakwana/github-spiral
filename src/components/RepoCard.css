@@ -1,37 +1,49 @@
+a {
+  text-decoration: none;
+  margin: 20px 30px;
+  height: fit-content;
+}
+
 .card-container {
   background-color: #fff;
-  max-width: 350px;
-  height: fit-content;
+  width: 350px;
   padding: 20px;
-  border-radius: 15px;
-  margin: 20px 30px;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 .repo-name {
   font-size: 25px;
   text-transform: capitalize;
   margin-top: 15px;
+  color: #80489c;
 }
 
 .repo-description {
   font-size: 18px;
   margin-top: 10px;
+  color: #000;
 }
 
 .date-created {
-  margin-top: 10px;
+  margin-top: 20px;
   display: block;
   margin-left: auto;
   font-weight: 600;
   font-size: 18px;
-  background-color: #fff;
+  background-color: #ffb3c6;
   border-radius: 15px;
   width: fit-content;
   padding: 5px 10px;
 }
 
 .days-spent-container {
-  background-color: aquamarine;
+  background-color: #06d6a0;
   position: absolute;
   padding: 10px;
   margin-top: -40px;
@@ -43,5 +55,23 @@
   font-size: 18px;
   font-weight: 600;
   text-transform: capitalize;
-  color: #434242;
+  color: #fff;
+}
+
+.topics-container {
+  display: none;
+}
+
+.topics-heading {
+  text-transform: capitalize;
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.topic-name {
+  font-size: 18px;
 }

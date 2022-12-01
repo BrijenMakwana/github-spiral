@@ -1,6 +1,6 @@
 .searchbar-container {
   background-color: #fff;
-  padding: 15px;
+  padding: 10px 15px;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -24,4 +24,13 @@
   outline: none;
   margin-left: 10px;
   flex: 1;
+  background-image: url("../assets/images/github.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 40px;
+  background-blend-mode: difference;
+}
+
+.search-btn:hover {
+  cursor: pointer;
 }
