@@ -6,17 +6,20 @@ export default function SearchBar(props) {
 
   return (
     <div className="searchbar-container">
-      <input
-        type="text"
-        placeholder="GitHub username"
-        className="input"
-        value={userSearch}
-        onChange={(e) => setUserSearch(e.target.value)}
-        // onSubmit={(e) => {
-        //   e.preventDefault();
-        //   submitUserName();
-        // }}
-      />
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          submitUserName();
+        }}
+      >
+        <input
+          type="text"
+          placeholder="GitHub username"
+          className="input"
+          value={userSearch}
+          onChange={(e) => setUserSearch(e.target.value)}
+        />
+      </form>
 
       <img
         src={require("../assets/images/search.png")}

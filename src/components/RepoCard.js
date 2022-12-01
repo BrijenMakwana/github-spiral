@@ -18,8 +18,9 @@ const RepoCard = (props) => {
 
         <div className="days-spent-container">
           <span className="days-spent-text">
-            {moment(repoLastUpdatedDate).diff(moment(repoCreatedDate), "days") +
-              1}{" "}
+            {Math.abs(
+              moment(repoLastUpdatedDate).diff(moment(repoCreatedDate), "days")
+            ) + 1}{" "}
             days
           </span>
         </div>

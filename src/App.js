@@ -8,6 +8,7 @@ function App() {
   const [repos, setRepos] = useState([]);
   const [user, setUser] = useState({});
   const [userSearch, setUserSearch] = useState("");
+  const [isSearched, setIsSearched] = useState(false);
 
   const getGitHubData = () => {
     axios
@@ -46,32 +47,37 @@ function App() {
   const submitUserName = () => {
     getUser();
     getGitHubData();
+    setIsSearched(true);
   };
 
   return (
     <div className="App">
+      {/* searchbar */}
       <SearchBar
         setUserSearch={setUserSearch}
         userSearch={userSearch}
         submitUserName={submitUserName}
       />
-      {user && userSearch && (
+      {isSearched && (
         <>
+          {/* user info */}
           <div className="github-user-container">
             <img
               src={user.avatar_url}
-              alt="user pic"
+              alt={user.name}
               className="user-profile-image"
             />
             <h1 className="user-name">{user.name}</h1>
             <h2 className="user-git-handle">@{user.login}</h2>
-            <p className="user-bio">{user.bio}</p>
+            {user.bio && <p className="user-bio">{user.bio}</p>}
             <div className="total-repos-container">
               <span className="total-repos-text">
                 {user.public_repos} repos
               </span>
             </div>
           </div>
+
+          {/* repos */}
           <div className="repo-cards">
             {repos &&
               repos.map((item, index) => (
