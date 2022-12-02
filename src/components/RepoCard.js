@@ -13,7 +13,7 @@ const RepoCard = (props) => {
     topics,
   } = props;
   return (
-    <a href={html_url} target="blank">
+    <a href={html_url} target="blank" className="repo-url">
       <div className="card-container">
         {/* total days spent */}
 

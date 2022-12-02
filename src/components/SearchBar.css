@@ -1,7 +1,8 @@
 .searchbar-container {
   background-color: #fff;
   padding: 10px 15px;
-  width: 500px;
+  width: 30vw;
+  min-width: 330px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 30px;

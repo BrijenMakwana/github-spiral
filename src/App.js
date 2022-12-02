@@ -15,7 +15,7 @@ function App() {
       .get(`https://api.github.com/users/${userSearch}/repos`)
       .then(function (response) {
         // handle success
-        console.log(response.data);
+
         setRepos(response.data);
       })
       .catch(function (error) {
@@ -62,17 +62,23 @@ function App() {
         <>
           {/* user info */}
           <div className="github-user-container">
-            <img
-              src={user.avatar_url}
-              alt={user.name}
-              className="user-profile-image"
-            />
+            <a href={user.html_url} target="blank">
+              <img
+                src={user.avatar_url}
+                alt={user.name}
+                className="user-profile-image"
+              />
+            </a>
+
             <h1 className="user-name">{user.name}</h1>
-            <h2 className="user-git-handle">@{user.login}</h2>
+            <a href={user.html_url} target="blank" className="user-url">
+              <h2 className="user-git-handle">@{user.login}</h2>
+            </a>
+
             {user.bio && <p className="user-bio">{user.bio}</p>}
             <div className="total-repos-container">
               <span className="total-repos-text">
-                {user.public_repos} repos
+                {user.public_repos} public repos
               </span>
             </div>
           </div>
