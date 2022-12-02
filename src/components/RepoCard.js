@@ -1,6 +1,7 @@
 import React from "react";
 import "./RepoCard.css";
 import moment from "moment";
+import Topic from "./Topic";
 
 const RepoCard = (props) => {
   const {
@@ -37,14 +38,7 @@ const RepoCard = (props) => {
 
         {/* TODO: show topics in tags format */}
         <div className="topics-container">
-          <h2 className="topics-heading">topics</h2>
-          <ul className="list">
-            {topics.map((topic, index) => (
-              <li key={index} className="topic-name">
-                {topic}
-              </li>
-            ))}
-          </ul>
+          <Topic />
         </div>
       </div>
     </a>

@@ -60,19 +60,4 @@ a {
 }
 
 .topics-container {
-  display: none;
-}
-
-.topics-heading {
-  text-transform: capitalize;
-}
-
-.list {
-  list-style-type: disc;
-  margin-left: 10px;
-  margin-top: 10px;
-}
-
-.topic-name {
-  font-size: 18px;
 }
