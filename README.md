@@ -22,7 +22,7 @@
 
 ## Links
 
-- Live Site URL: []()
+- Live Site URL: [https://github-directory.vercel.app](https://github-directory.vercel.app)
 
 ## Built with
 
