@@ -28,9 +28,7 @@ const RepoCard = (props) => {
         {/* repo name */}
         <h2 className="repo-name">{repoName}</h2>
         {/* repo description */}
-        <p className="repo-description">
-          {repoDescription ?? "no description available"}
-        </p>
+        <p className="repo-description">{repoDescription && repoDescription}</p>
         {/* repo created date */}
         <span className="date-created">
           {moment(repoCreatedDate).format("ll")}
@@ -38,7 +36,10 @@ const RepoCard = (props) => {
 
         {/* TODO: show topics in tags format */}
         <div className="topics-container">
-          <Topic />
+          {topics &&
+            topics.map((item, index) => (
+              <Topic topicTitle={item} key={index} />
+            ))}
         </div>
       </div>
     </a>
