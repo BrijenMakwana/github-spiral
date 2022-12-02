@@ -20,7 +20,7 @@ function App() {
       })
       .catch(function (error) {
         // handle error
-        console.log(error);
+        alert("Something went wrong!! Please try again later");
       })
       .then(function () {
         // always executed
@@ -37,7 +37,7 @@ function App() {
       })
       .catch(function (error) {
         // handle error
-        console.log(error);
+        alert("Something went wrong!! Please try again later");
       })
       .then(function () {
         // always executed
