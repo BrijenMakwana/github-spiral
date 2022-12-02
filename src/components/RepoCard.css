@@ -36,10 +36,11 @@ a {
   margin-left: auto;
   font-weight: 600;
   font-size: 18px;
-  background-color: #ffb3c6;
+  background-color: hsla(355, 100%, 73%, 1);
   border-radius: 15px;
   width: fit-content;
   padding: 5px 10px;
+  color: #fff;
 }
 
 .days-spent-container {

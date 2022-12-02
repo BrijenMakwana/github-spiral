@@ -34,6 +34,8 @@ const RepoCard = (props) => {
         <span className="date-created">
           {moment(repoCreatedDate).format("ll")}
         </span>
+
+        {/* TODO: show topics in tags format */}
         <div className="topics-container">
           <h2 className="topics-heading">topics</h2>
           <ul className="list">

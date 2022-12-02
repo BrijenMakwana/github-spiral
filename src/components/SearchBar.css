@@ -17,18 +17,23 @@
   height: 35px;
 }
 
+form {
+  flex: 1;
+}
+
 .input {
   border: none;
   padding: 10px;
   font-size: 18px;
   outline: none;
-  margin-left: 10px;
   flex: 1;
   background-image: url("../assets/images/github.png");
   background-size: contain;
   background-repeat: no-repeat;
   text-indent: 40px;
   background-blend-mode: difference;
+
+  width: 100%;
 }
 
 .search-btn:hover {
