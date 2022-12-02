@@ -27,6 +27,7 @@
 ## Built with
 
 - React
+- HTML
 - CSS
 - Javascript
 - GitHub API
