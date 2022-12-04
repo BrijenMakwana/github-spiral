@@ -9,7 +9,7 @@
 
 ## Overview
 
-- You can search for any GitHuyb user.
+- You can search for any GitHub user.
 - This web application will provide GitHub user data such as name, user handle, bio, and the total number of public repos that the user owns.
 - The majority of public repositories will be displayed in a card-style layout that includes information on the name, description, and tech stacks employed in each repository.
 
